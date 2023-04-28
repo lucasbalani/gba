@@ -13,5 +13,6 @@ WITH (
   FIRSTROW = 1
 );
 
+insert into Products
 select * from #productTemporary
 --drop table #productTemporary
