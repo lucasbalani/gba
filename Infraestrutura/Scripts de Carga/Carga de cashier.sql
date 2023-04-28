@@ -10,5 +10,7 @@ WITH (
   FIRSTROW = 1
 );
 
+insert into Cashiers
 select * from #cashierTemporary
+
 --drop table #cashierTemporary
