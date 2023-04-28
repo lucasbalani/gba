@@ -10,7 +10,6 @@ namespace GBA.Domain.Models
         public string Name { get; set; }
         public Decimal Price { get; set; }
         public DateTime ExpirationDate { get; set; }
-        [EnumDataType(typeof(ProductType))]
         public ProductType TypeProduct { get; set;}
         public IList<SaleItem> SaleItems { get; set; }
     }
