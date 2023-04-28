@@ -3,7 +3,7 @@ CREATE TABLE #cashierTemporary (
 );
 
 BULK INSERT #cashierTemporary
-FROM 'C:\Users\ValorUp-99\Desktop\Projeto Faculdade\CSVs\Cashiers.csv'
+FROM 'C:\ProjectsUniversity\GbaProject\gba\Infraestrutura\CSVs\Cashiers.csv'
 WITH (
   FIELDTERMINATOR = ';',
   ROWTERMINATOR = '\n',

@@ -6,7 +6,7 @@ CREATE TABLE #productTemporary (
 );
 
 BULK INSERT #productTemporary
-FROM 'C:\Users\ValorUp-99\Desktop\Projeto Faculdade\CSVs\Produtos.csv'
+FROM 'C:\ProjectsUniversity\GbaProject\gba\Infraestrutura\CSVs\Produtos.csv'
 WITH (
   FIELDTERMINATOR = ';',
   ROWTERMINATOR = '\n',
