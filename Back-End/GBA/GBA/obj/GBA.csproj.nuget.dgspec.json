@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projectsuniversity\\gbaproject\\gba\\back-end\\gba\\gba\\GBA.csproj": {}
+    "C:\\ProjectsUniversity\\GbaProject\\gba\\Back-End\\GBA\\GBA\\GBA.csproj": {}
   },
   "projects": {
-    "C:\\projectsuniversity\\gbaproject\\gba\\back-end\\gba\\gba\\GBA.csproj": {
+    "C:\\ProjectsUniversity\\GbaProject\\gba\\Back-End\\GBA\\GBA\\GBA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projectsuniversity\\gbaproject\\gba\\back-end\\gba\\gba\\GBA.csproj",
+        "projectUniqueName": "C:\\ProjectsUniversity\\GbaProject\\gba\\Back-End\\GBA\\GBA\\GBA.csproj",
         "projectName": "GBA",
-        "projectPath": "C:\\projectsuniversity\\gbaproject\\gba\\back-end\\gba\\gba\\GBA.csproj",
+        "projectPath": "C:\\ProjectsUniversity\\GbaProject\\gba\\Back-End\\GBA\\GBA\\GBA.csproj",
         "packagesPath": "C:\\Users\\ValorUp-99\\.nuget\\packages\\",
-        "outputPath": "C:\\projectsuniversity\\gbaproject\\gba\\back-end\\gba\\gba\\obj\\",
+        "outputPath": "C:\\ProjectsUniversity\\GbaProject\\gba\\Back-End\\GBA\\GBA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ValorUp-99\\AppData\\Roaming\\NuGet\\NuGet.Config",

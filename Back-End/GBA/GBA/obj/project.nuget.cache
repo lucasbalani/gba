@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LcCOa4AKNrTqLNhQ17vzYZw5ann01RPOQMpduqXPQg3/wKko5exwNoq2w5BUbEjx4f3gM5vkEnobEpE8UXYpbQ==",
+  "dgSpecHash": "epAZ0rCX9bXldK7gMiOQr9pfKAwdL2rnG6VzTI+MVKv9EJGkjvT3EPFfS4BrOBGLTClC5u9fwT/I1WbuJyBNcw==",
   "success": true,
-  "projectFilePath": "C:\\projectsuniversity\\gbaproject\\gba\\back-end\\gba\\gba\\GBA.csproj",
+  "projectFilePath": "C:\\ProjectsUniversity\\GbaProject\\gba\\Back-End\\GBA\\GBA\\GBA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ValorUp-99\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ValorUp-99\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
