@@ -1,0 +1,95 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$custom-primary-color: (
+    50: #f81919,
+    100: #f81919,
+    200: #f81919,
+    300: #c90303,
+    400: #cb5252,
+    500: #cb5252,
+    600: #cb5252,
+    700: #cb5252,
+    800: #cb5252,
+    900: #cb5252,
+    A100: #f81919,
+    A200: #f81919,
+    A400: #6a1100,
+    A700: #6a1100,
+    contrast: (50: #fff,
+        100: #fff,
+        200: #fff,
+        300: #fff,
+        400: #fff,
+        500: #fff,
+        600: #fff,
+        700: #fff,
+        800: #fff,
+        900: #fff,
+        A100: #fff,
+        A200: #fff,
+        A400: #fff,
+        A700: #fff,
+    ),
+);
+
+$custom-accent-color: (
+    50: #fdec6c,
+    100: #fdfb6c,
+    200: #fdf36c,
+    300: #eefd6c,
+    400: #fbff00,
+    500: #fbff00,
+    600: #f2ff00,
+    700: #e5ff00,
+    800: #8c8c00,
+    900: #868d02,
+    A100: #fdfb6c,
+    A200: #fdf86c,
+    A400: #fff700,
+    A700: #fffb00,
+    contrast: (50: #fff,
+        100: #fff,
+        200: #fff,
+        300: #fff,
+        400: #fff,
+        500: #fff,
+        600: #fff,
+        700: #fff,
+        800: #fff,
+        900: #fff,
+        A100: #fff,
+        A200: #fff,
+        A400: #fff,
+        A700: #fff,
+    ),
+);
+
+$app-primary: mat.define-palette($custom-primary-color, 500);
+$app-accent: mat.define-palette($custom-accent-color, 500, 900, A100);
+$app-warn: mat.define-palette(mat.$red-palette);
+
+$app-light-theme: mat.define-light-theme((color: (primary: $app-primary,
+                accent: $app-accent,
+                warn: $app-warn,
+            ),
+            typography: mat.define-typography-config(),
+            density: 0,
+        ));
+
+$app-dark-theme: mat.define-dark-theme((color: (primary: $app-primary,
+                accent: $app-accent,
+                warn: $app-warn,
+            ),
+            typography: mat.define-typography-config(),
+            density: 0,
+        ));
+
+.light-mode {
+    @include mat.all-component-themes($app-light-theme);
+}
+
+.dark-mode {
+    @include mat.all-component-themes($app-dark-theme);
+}
