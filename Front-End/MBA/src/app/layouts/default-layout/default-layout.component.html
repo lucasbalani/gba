@@ -1,9 +1,9 @@
 <mat-drawer-container class="h-100">
     <mat-drawer mode="side" [opened]="isOpened" style="width: 240px;">
         <mat-nav-list>
-            <a mat-list-item *ngFor="let option of optionsMenu" [routerLink]="item.route">
+            <a mat-list-item *ngFor="let option of optionsMenu" [routerLink]="option.route">
                 <fa-icon class="me-2"></fa-icon>
-                <span>Teste</span>
+                <span>{{option.title}}</span>
             </a>
         </mat-nav-list>
     </mat-drawer>

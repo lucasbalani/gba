@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OptionMenu } from 'src/app/models/option-menu';
 import { DrawerService } from 'src/app/services/drawer.service';
 
 @Component({
@@ -9,6 +10,9 @@ import { DrawerService } from 'src/app/services/drawer.service';
 export class DefaultLayoutComponent {
 
   isOpened = false;
+  optionsMenu: OptionMenu[] = [
+    new OptionMenu('Home', 'house', ['/'])
+  ]
 
   constructor(private _drawerService: DrawerService) { }
 
@@ -18,5 +22,7 @@ export class DefaultLayoutComponent {
         this.isOpened = !this.isOpened
       }
     })
+
+    
   }
 }
