@@ -30,6 +30,7 @@ builder.Services.AddScoped<ISaleItemRepo, SaleItemRepo>();
 builder.Services.AddScoped<IProductRepo, ProductRepo>();
 builder.Services.AddScoped<ICashierRepo, CashierRepo>();
 builder.Services.AddScoped<ISaleService, SaleService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 #endregion
 
 
@@ -38,7 +39,7 @@ builder.Services.AddCors(options => options.AddPolicy("AllowCors", builder =>
     builder.SetIsOriginAllowed(_ => true)
            .AllowAnyMethod()
            .AllowAnyHeader()
-           .AllowCredentials();
+           .AllowAnyOrigin();
 }));
 
 
@@ -50,6 +51,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowCors");
 
 app.UseHttpsRedirection();
 

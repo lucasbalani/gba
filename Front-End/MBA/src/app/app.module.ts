@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MomentDateAdapter } from "@angular/material-moment-adapter";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -65,7 +66,8 @@ import { ReportSalesPageComponent } from './pages/report-sales-page/report-sales
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     { provide: DateAdapter, useClass: MomentDateAdapter },
@@ -84,6 +86,7 @@ import { ReportSalesPageComponent } from './pages/report-sales-page/report-sales
       }
     },
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 3500 } },
+    { provide: DateAdapter, useClass: MomentDateAdapter },
   ],
   bootstrap: [AppComponent]
 })

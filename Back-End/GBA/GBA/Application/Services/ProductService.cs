@@ -1,4 +1,4 @@
-﻿using GBA.Domain.Contracts.Sales;
+﻿using GBA.Domain.Contracts.Products;
 using GBA.Domain.Contracts.Services;
 using GBA.Domain.DTOs;
 using GBA.Domain.Models;

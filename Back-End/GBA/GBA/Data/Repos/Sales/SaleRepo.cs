@@ -23,7 +23,7 @@ namespace GBA.Data.Repos.Sales
             if (filter.CashierId != null)
                 query = query.Where(x => x.CashierId == filter.CashierId).ToList();
 
-            return query;
+            return query.OrderBy(x => x.TypePayment).ThenBy(x => x.SaleDate).ToList();
         }
     }
 }

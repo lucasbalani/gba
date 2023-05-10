@@ -5,5 +5,6 @@ namespace GBA.Domain.Contracts.Products
 {
     public interface IProductRepo : IGenericRepo<Product>
     {
+        Task<IList<Product>> ListByFilter(ProductReportFilterDto filter);
     }
 }
