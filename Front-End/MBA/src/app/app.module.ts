@@ -26,10 +26,14 @@ import { MatTableModule } from "@angular/material/table";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatSortModule } from "@angular/material/sort";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { SaleReportPageComponent } from './pages/sale-report-page/sale-report-page.component';
+import { ReportSalesPageComponent } from './pages/report-sales-page/report-sales-page/report-sales-page.component';
 
 
 
@@ -38,7 +42,7 @@ import { SaleReportPageComponent } from './pages/sale-report-page/sale-report-pa
     AppComponent,
     DefaultLayoutComponent,
     HomePageComponent,
-    SaleReportPageComponent
+    ReportSalesPageComponent
   ],
   imports: [
     FontAwesomeModule,
@@ -58,7 +62,10 @@ import { SaleReportPageComponent } from './pages/sale-report-page/sale-report-pa
     MatSortModule,
     MatAutocompleteModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: DateAdapter, useClass: MomentDateAdapter },

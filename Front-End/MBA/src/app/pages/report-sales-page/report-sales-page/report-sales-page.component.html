@@ -1,0 +1,40 @@
+<h4 class="mt-4"><strong>Relatório vendas</strong></h4>
+<div class="d-flex justify-content-center algin-items-center" *ngIf="isLoading">
+    <mat-spinner diameter="45"></mat-spinner>
+</div>
+<div *ngIf="!emit" class="col-4 offset-4 mt-5">
+    <mat-card class="p-3">
+        <mat-form-field appearance="outline">
+            <mat-label>Pagamento</mat-label>
+            <mat-select>
+                <mat-option [value]="1">CRÉDITO</mat-option>
+                <mat-option [value]="2">DÉBITO</mat-option>
+                <mat-option [value]="3">A VISTA</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" required>
+            <mat-label>Caixa</mat-label>
+            <mat-select>
+                <mat-option [value]="1">CAIXA BALCAO</mat-option>
+                <mat-option [value]="2">CAIXA PADARIA</mat-option>
+                <mat-option [value]="3">CAIXA CONVENIENCIA</mat-option>
+                <mat-option [value]="3">CAIXA DELIVERY</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Período</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+                <input matStartDate placeholder="Start date">
+                <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+
+        <div class="d-flex justify-content-end">
+            <button class="col-3" mat-raised-button color="primary" (click)='toggleEmit()'>Emitir</button>
+        </div>
+    </mat-card>
+</div>

@@ -1,10 +1,8 @@
-using GBA.App.Services;
+using GBA.Application.Services;
 using GBA.Data;
-using GBA.Data.Repos;
 using GBA.Data.Repos.Cashiers;
 using GBA.Data.Repos.Products;
 using GBA.Data.Repos.Sales;
-using GBA.Domain.Contracts;
 using GBA.Domain.Contracts.Cashiers;
 using GBA.Domain.Contracts.Products;
 using GBA.Domain.Contracts.Sales;
