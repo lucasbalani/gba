@@ -29,13 +29,16 @@ import { MatAutocompleteModule } from "@angular/material/autocomplete";
 
 import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { SaleReportPageComponent } from './pages/sale-report-page/sale-report-page.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DefaultLayoutComponent,
-    HomePageComponent
+    HomePageComponent,
+    SaleReportPageComponent
   ],
   imports: [
     FontAwesomeModule,

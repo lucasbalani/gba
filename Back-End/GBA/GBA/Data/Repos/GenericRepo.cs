@@ -14,7 +14,7 @@ namespace GBA.Data.Repos
         /// <summary>
         /// Get all informations.
         /// </summary>
-        public async Task<IList<T>> Get()
+        public async Task<IList<T>> List()
             => await _dbSet.ToListAsync();
 
 

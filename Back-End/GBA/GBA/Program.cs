@@ -1,3 +1,4 @@
+using GBA.App.Services;
 using GBA.Data;
 using GBA.Data.Repos;
 using GBA.Data.Repos.Cashiers;
@@ -7,6 +8,7 @@ using GBA.Domain.Contracts;
 using GBA.Domain.Contracts.Cashiers;
 using GBA.Domain.Contracts.Products;
 using GBA.Domain.Contracts.Sales;
+using GBA.Domain.Contracts.Services;
 
 using Microsoft.EntityFrameworkCore;
 
@@ -29,6 +31,7 @@ builder.Services.AddScoped<ISaleRepo, SaleRepo>();
 builder.Services.AddScoped<ISaleItemRepo, SaleItemRepo>();
 builder.Services.AddScoped<IProductRepo, ProductRepo>();
 builder.Services.AddScoped<ICashierRepo, CashierRepo>();
+builder.Services.AddScoped<ISaleService, SaleService>();
 #endregion
 
 
