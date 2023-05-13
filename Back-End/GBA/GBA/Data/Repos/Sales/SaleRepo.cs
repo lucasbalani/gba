@@ -17,8 +17,8 @@ namespace GBA.Data.Repos.Sales
             var query = _dbSet.Where(x => x.SaleDate.Date >= filter.Start.Date &&
                                           x.SaleDate.Date <= filter.End.Date).Include(x => x.SaleItems).ToList();
 
-            if (filter.PaymentType != null)
-                query = query.Where(x => x.TypePayment == filter.PaymentType).ToList();
+            if (filter.TypePayment != null)
+                query = query.Where(x => x.TypePayment == filter.TypePayment).ToList();
 
             if (filter.CashierId != null)
                 query = query.Where(x => x.CashierId == filter.CashierId).ToList();

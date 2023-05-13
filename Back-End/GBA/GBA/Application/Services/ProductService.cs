@@ -18,5 +18,8 @@ namespace GBA.Application.Services
 
         public async Task<IList<Product>> ListByFilter(ProductReportFilterDto filter)
             => await _repo.ListByFilter(filter);
+
+        public IList<ProductTopReportDto> ListTop()
+            => _repo.ListTop();
     }
 }

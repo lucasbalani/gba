@@ -10,6 +10,8 @@ using GBA.Domain.Contracts.Services;
 
 using Microsoft.EntityFrameworkCore;
 
+using System.Text.Json.Serialization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -24,6 +26,8 @@ builder.Services.AddEntityFrameworkSqlServer()
         options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase"))
     );
 
+builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
 #region IOC Repos
 builder.Services.AddScoped<ISaleRepo, SaleRepo>();
 builder.Services.AddScoped<ISaleItemRepo, SaleItemRepo>();
@@ -31,6 +35,8 @@ builder.Services.AddScoped<IProductRepo, ProductRepo>();
 builder.Services.AddScoped<ICashierRepo, CashierRepo>();
 builder.Services.AddScoped<ISaleService, SaleService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IHomeService, HomeService>();
+
 #endregion
 
 

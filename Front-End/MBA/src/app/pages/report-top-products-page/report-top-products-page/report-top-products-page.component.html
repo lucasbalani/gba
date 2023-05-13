@@ -1,0 +1,31 @@
+<h4 class="mt-4"><strong>Relatório top produtos vendidos</strong></h4>
+<mat-divider class="mt-3"></mat-divider>
+<table mat-table [dataSource]="data" class="mt-2 mat-elevation-z8">
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Nome </th>
+        <td mat-cell class="text-light" *matCellDef="let element"> <strong>{{element.product.name}}</strong> </td>
+    </ng-container>
+
+    <ng-container matColumnDef="typeProduct">
+        <th mat-header-cell *matHeaderCellDef>Tipo </th>
+        <td mat-cell class="text-light" *matCellDef="let element"> {{getNameTypeProduct(element.product.typeProduct)}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="expirationDate">
+        <th mat-header-cell *matHeaderCellDef> Data </th>
+        <td mat-cell class="text-light" *matCellDef="let element"> {{element.product.expirationDate | date:'dd/MM/yyyy'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>Valor </th>
+        <td mat-cell class="text-light" *matCellDef="let element"> <strong>{{element.product.price | currency: 'BRL'}}</strong> </td>
+    </ng-container>
+
+    <ng-container matColumnDef="quantitySale">
+        <th mat-header-cell *matHeaderCellDef> Qtd. Vendida </th>
+        <td mat-cell class="text-light" *matCellDef="let element"> <h5><strong>{{element.quantitySale}}</strong></h5></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+</table>

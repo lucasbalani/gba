@@ -1,1 +1,28 @@
-<h3 class="mt-3">Seja bem-vindo ao seu negócio!.</h3>
+<h3 class="mt-3">Bem-Vindo</h3>
+<mat-divider class="mt-3 mb-3"></mat-divider>
+<div class="d-flex justify-content-between">
+    <mat-card class="p-4 border border-light">
+        <h6>Qtde. Vendas</h6>
+        <h3 style="text-align: center;"><strong>{{homePageDto.saleQuantity}}</strong></h3>
+    </mat-card>
+    <mat-card class="p-4 border border-light">
+        <h6>Total Faturamento</h6>
+        <h3 style="text-align: center;" class="text-success"><strong>{{homePageDto.totalPrice | currency: 'BRL'}}</strong></h3>
+    </mat-card>
+    <mat-card class="p-4 border border-light">
+        <h6>Produtos</h6>
+        <h3 style="text-align: center;"><strong>{{homePageDto.productQuantity}}</strong></h3>
+    </mat-card>
+    <mat-card class="p-4 border border-light">
+        <h6>Produto mais vendido</h6>
+        <h3 style="text-align: center;"><strong>{{homePageDto.topProductNameSale}}</strong></h3>
+    </mat-card>
+</div>
+
+<div class="row border border-danger m-2">
+    <mat-card>
+        <div class="chart-wrapper">
+            <canvas class="w-50 h-100" #myChart></canvas>
+        </div>
+    </mat-card>
+</div>

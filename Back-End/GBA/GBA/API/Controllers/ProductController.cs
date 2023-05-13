@@ -24,5 +24,10 @@ namespace GBA.API.Controllers
         [HttpPost("report")]
         public async Task<IList<Product>> getProductReportWithFilter([FromBody] ProductReportFilterDto filter)
             => await _productService.ListByFilter(filter);
+
+        [HttpGet("reportTopProduct")]
+        public IList<ProductTopReportDto> ListTopProducts()
+            => _productService.ListTop();
+
     }
 }

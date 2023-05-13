@@ -12,8 +12,9 @@ export class DefaultLayoutComponent {
   isOpened = false;
   optionsMenu: OptionMenu[] = [
     new OptionMenu('Home', 'house', ['/']),
-    new OptionMenu('Vendas', 'house', ['/sale-report']),
-    new OptionMenu('Produtos', 'house', ['/'])
+    new OptionMenu('Vendas', 'amazon-pay', ['/sale-report']),
+    new OptionMenu('Produtos', 'amazon', ['/product-report']),
+    new OptionMenu('Top Produtos', 'amazon', ['/product-top-report'])
   ]
 
   constructor(private _drawerService: DrawerService) { }

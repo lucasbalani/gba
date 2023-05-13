@@ -1,5 +1,6 @@
 <h4 class="mt-4"><strong>Relatório vendas</strong></h4>
-<div class="d-flex justify-content-center algin-items-center" *ngIf="isLoading">
+<mat-divider class="mt-3"></mat-divider>
+<div class="d-flex justify-content-center algin-items-center mt-2" *ngIf="isLoading">
     <mat-spinner diameter="45"></mat-spinner>
 </div>
 <div *ngIf="!emitted" class="col-4 offset-4 mt-5">
@@ -40,7 +41,7 @@
         </mat-card>
     </form>
 </div>
-<div *ngIf="emitted && !isLoading">
+<div *ngIf="emitted && !isLoading" class="mt-2">
     <table mat-table [dataSource]="data" class="mat-elevation-z8">
         <ng-container matColumnDef="typePayment">
             <th mat-header-cell *matHeaderCellDef> Tipo Pgto </th>

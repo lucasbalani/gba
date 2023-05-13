@@ -35,15 +35,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ReportSalesPageComponent } from './pages/report-sales-page/report-sales-page/report-sales-page.component';
+import { ReportProductsPageComponent } from './pages/report-products-page/report-products-page/report-products-page.component';
 
-
+import { CurrencyMaskModule } from "ng2-currency-mask";
+import { ReportTopProductsPageComponent } from './pages/report-top-products-page/report-top-products-page/report-top-products-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DefaultLayoutComponent,
     HomePageComponent,
-    ReportSalesPageComponent
+    ReportSalesPageComponent,
+    ReportProductsPageComponent,
+    ReportTopProductsPageComponent
   ],
   imports: [
     FontAwesomeModule,
@@ -67,7 +71,8 @@ import { ReportSalesPageComponent } from './pages/report-sales-page/report-sales
     MatProgressSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CurrencyMaskModule
   ],
   providers: [
     { provide: DateAdapter, useClass: MomentDateAdapter },

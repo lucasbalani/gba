@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "epAZ0rCX9bXldK7gMiOQr9pfKAwdL2rnG6VzTI+MVKv9EJGkjvT3EPFfS4BrOBGLTClC5u9fwT/I1WbuJyBNcw==",
+  "dgSpecHash": "oXrU3jF2dHqluw2zqf5VJzaSOCsPfn5KZCiI2rVueMjY0L7Mc5KgCLy84TialfGZI+o4su6HwoC3+6OH3rMKhA==",
   "success": true,
   "projectFilePath": "C:\\ProjectsUniversity\\GbaProject\\gba\\Back-End\\GBA\\GBA\\GBA.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,7 @@
     "C:\\Users\\ValorUp-99\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\ValorUp-99\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\ValorUp-99\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\ValorUp-99\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\ValorUp-99\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\ValorUp-99\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\ValorUp-99\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",

@@ -67,7 +67,7 @@ export class ReportSalesPageComponent {
 
     this._serviceReportSales.getReportWithFilter(filter).subscribe({
       next: (sales: Sale[]) => {
-        this.data = sales
+        this.data = sales;
 
         this.emitted = true;
         this.isLoading = false;
