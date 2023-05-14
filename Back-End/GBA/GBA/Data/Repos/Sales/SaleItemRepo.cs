@@ -9,5 +9,8 @@ namespace GBA.Data.Repos.Sales
     {
         private readonly DbSet<SaleItem> _dbSet;
         public SaleItemRepo(MbaDbContext context) : base (context) => _dbSet = context.SalesItems;
+
+        public async Task<IList<SaleItem>> ListById(IList<long> ids) 
+            => await _dbSet.Include(x => x.Product).Where(x => ids.Contains(x.Id)).ToListAsync();
     }
 }

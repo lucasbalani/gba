@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Product } from 'src/app/models/product';
@@ -17,7 +18,8 @@ export class ReportProductsPageComponent {
   columns = ['name', 'typeProduct', 'expirationDate', 'price']
 
   constructor(private _formBuilder: FormBuilder,
-    private _serviceReportProduct: ReportProductService) { }
+    private _serviceReportProduct: ReportProductService,
+    private _location: Location) { }
 
   ngOnInit() {
     this.createForm();
@@ -54,5 +56,9 @@ export class ReportProductsPageComponent {
     }
 
     return 'ERRO';
+  }
+
+  backClicked(){
+    this._location.back();
   }
 }

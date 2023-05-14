@@ -2,8 +2,8 @@
     <mat-drawer mode="side" [opened]="isOpened" style="width: 240px;">
         <mat-nav-list>
             <a mat-list-item *ngFor="let option of optionsMenu" [routerLink]="option.route">
-                <fa-icon class="me-2"></fa-icon>
-                <span>{{option.title}}</span>
+                <fa-icon class="me-2" [icon]="option.icon"></fa-icon>
+                <span style="align-items: center;">{{option.title}}</span>
             </a>
         </mat-nav-list>
     </mat-drawer>

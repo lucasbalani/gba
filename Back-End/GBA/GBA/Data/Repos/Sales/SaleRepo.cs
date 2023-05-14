@@ -25,5 +25,8 @@ namespace GBA.Data.Repos.Sales
 
             return query.OrderBy(x => x.TypePayment).ThenBy(x => x.SaleDate).ToList();
         }
+
+        public async Task<IList<Sale>> ListInclude()
+            => await _dbSet.Include(x => x.SaleItems).ToListAsync();
     }
 }

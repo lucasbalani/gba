@@ -1,5 +1,5 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
-import { ReportProductFilterDto } from 'src/app/DTOs/report-product-filter-dto';
 import { ReportTopProductDto } from 'src/app/DTOs/report-top-product-dto';
 import { ReportProductService } from 'src/app/services/report-product-service/report-product.service';
 
@@ -12,7 +12,8 @@ export class ReportTopProductsPageComponent {
   data!: ReportTopProductDto[];
   columns = ['name', 'typeProduct', 'expirationDate', 'price', 'quantitySale']
 
-  constructor (private _service: ReportProductService){}
+  constructor (private _service: ReportProductService,
+               private _location: Location){}
 
   ngOnInit(){
     this.list();
@@ -35,5 +36,9 @@ export class ReportTopProductsPageComponent {
     }
 
     return 'ERRO';
+  }
+
+  backClicked(){
+    this._location.back();
   }
 }

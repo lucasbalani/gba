@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Sale } from 'src/app/models/sale';
@@ -17,7 +18,8 @@ export class ReportSalesPageComponent {
   columns = ['typePayment', 'cashierId', 'saleDate', 'totalPrice']
 
   constructor(private _formBuilder: FormBuilder,
-    private _serviceReportSales: SaleReportService) { }
+    private _serviceReportSales: SaleReportService,
+    private _location: Location) { }
 
 
   ngOnInit() {
@@ -74,5 +76,9 @@ export class ReportSalesPageComponent {
       }
     })
 
+  }
+
+  backClicked(){
+    this._location.back();
   }
 }

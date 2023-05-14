@@ -7,5 +7,7 @@
         public Decimal TotalPrice { get; set; }
         public string TopProductNameSale { get; set; }
 
+        public IList<SaleGraphicDto> SalesGraphicDto { get; set;}
+
     }
 }
