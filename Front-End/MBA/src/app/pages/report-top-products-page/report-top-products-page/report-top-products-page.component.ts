@@ -12,33 +12,33 @@ export class ReportTopProductsPageComponent {
   data!: ReportTopProductDto[];
   columns = ['name', 'typeProduct', 'expirationDate', 'price', 'quantitySale']
 
-  constructor (private _service: ReportProductService,
-               private _location: Location){}
+  constructor(private _service: ReportProductService,
+    private _location: Location) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.list();
   }
 
-  list(){
+  list() {
     this._service.getReportTopProducts().subscribe({
       next: (products: ReportTopProductDto[]) => {
         this.data = products;
       }
     })
   }
-  
-  getNameTypeProduct(value: Number): string{
-    switch(value){
+
+  getNameTypeProduct(value: Number): string {
+    switch (value) {
       case 1:
-        return 'ALIMENTO'
-        case 2:
         return 'BEBIDA'
+      case 2:
+        return 'ALIMENTO'
     }
 
     return 'ERRO';
   }
 
-  backClicked(){
+  backClicked() {
     this._location.back();
   }
 }

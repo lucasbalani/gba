@@ -47,18 +47,18 @@ export class ReportProductsPageComponent {
     })
   }
 
-  getNameTypeProduct(value: Number): string{
-    switch(value){
+  getNameTypeProduct(value: Number): string {
+    switch (value) {
       case 1:
-        return 'ALIMENTO'
-        case 2:
         return 'BEBIDA'
+      case 2:
+        return 'ALIMENTO'
     }
 
     return 'ERRO';
   }
 
-  backClicked(){
+  backClicked() {
     this._location.back();
   }
 }
